@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+reports/
+confession.md
+.pytest_cache/
+dist/

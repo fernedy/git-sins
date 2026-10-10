@@ -1,0 +1,10 @@
+# Confess any repository with Docker:
+#   SIN_REPO=/path/to/any/repo docker compose run --rm confession /repo --share
+# The repo is mounted READ-ONLY; written reports land in ./reports.
+services:
+  confession:
+    build: .
+    image: fernedy/git-sins:latest
+    volumes:
+      - ${SIN_REPO:?set SIN_REPO to the repository you want to confess}:/repo:ro
+      - ./reports:/reports

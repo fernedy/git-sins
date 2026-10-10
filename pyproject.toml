@@ -1,0 +1,26 @@
+[project]
+name = "git-sins"
+version = "1.0.0"
+description = "The confession booth for your git history: deterministic sins, a 0-100 Sin Score, evidence and penance. Zero dependencies, read-only, optional local AI."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "Fernedy Arias" }]
+keywords = ["git", "code-review", "developer-tools", "humor", "ai", "devtools", "retrospective"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Version Control",
+]
+
+[project.scripts]
+git-sins = "git_sins:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["git_sins"]
